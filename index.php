@@ -8,6 +8,8 @@ ADD YOUR USERNAME ON LINE 168
 
 ADD YOUR WEBURL ON LINE 366 (optional)
 
+Thanks BenchamXd
+
 TO SET WEBHOOK - https://api.telegram.org/bot<token>/setwebhook?url=WEBURL(from line 366)
 */
 define('BOT_TOKEN', 'your_bot_token');
@@ -163,7 +165,7 @@ function processMessage($message) {
 XO Game Bot
 
 Simple Bot which lets you play the xo game with your friends...
-This bot works on inline mode, open the chat where you want to play, type `@indus_xobot play` and click on the poup to start your game.", 'parse_mode'=>"MarkDown",'reply_markup' => array(
+This bot works on inline mode, open the chat where you want to play, type `@YourBotUsername play` and click on the poup to start your game.", 'parse_mode'=>"MarkDown",'reply_markup' => array(
             "inline_keyboard"=>array(
 			    array(array("text"=>"CREATOR","url"=>"https://telegram.me/your_username")),
 			    array(array("text"=>"♂Start XO Game","switch_inline_query"=>md5(date("YMDms"))))
@@ -178,7 +180,7 @@ function inlineMessage($inline){
 	$chat_id=$inline['from']['id'];
 	$query=$inline['query'];
 	
-	apiRequest("answerInlineQuery",array("inline_query_id"=>$id,"results"=>array(array("type"=>"article","id"=>$query,"title"=>"PLAY XO-GAME. BOT BY @Indusbots","input_message_content"=>array("message_text"=>"
+	apiRequest("answerInlineQuery",array("inline_query_id"=>$id,"results"=>array(array("type"=>"article","id"=>$query,"title"=>"PLAY XO-GAME. BOT BY @NCBots","input_message_content"=>array("message_text"=>"
 .                    ***XO Game***
 👇 Press the below button to start 👇","parse_mode"=>"MarkDown","disable_web_page_preview"=>false),
 	    "reply_markup"=>array(
